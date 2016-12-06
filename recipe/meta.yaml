@@ -26,13 +26,13 @@ requirements:
     - freetype 2.6.*
     - libiconv
     - libpng >=1.6.23,<1.7
-    - libxml2
+    - libxml2 2.9.*
 
   run:
     - freetype 2.6.*
     - libiconv
     - libpng >=1.6.23,<1.7
-    - libxml2
+    - libxml2 2.9.*
 
 test:
   commands:

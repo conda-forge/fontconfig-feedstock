@@ -6,6 +6,8 @@ channel_targets:
 - conda-forge main
 expat:
 - '2'
+fontconfig:
+- '2'
 freetype:
 - '2'
 libiconv:
@@ -13,4 +15,4 @@ libiconv:
 target_platform:
 - win-64
 zlib:
-- '1.2'
+- '1'

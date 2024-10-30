@@ -1,10 +1,14 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 expat:
+- '2'
+fontconfig:
 - '2'
 freetype:
 - '2'
@@ -13,4 +17,4 @@ libiconv:
 target_platform:
 - win-64
 zlib:
-- '1.2'
+- '1'

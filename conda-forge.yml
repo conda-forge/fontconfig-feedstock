@@ -11,3 +11,6 @@ provider:
 conda_build:
   pkg_format: '2'
 test: native_and_emulated
+bot:
+  version_updates:
+    even_odd_versions: true

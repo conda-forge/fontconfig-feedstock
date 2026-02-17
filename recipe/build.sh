@@ -29,7 +29,7 @@ meson setup builddir "${meson_setup_args[@]}" || { cat builddir/meson-logs/meson
 
 ninja -v -C builddir -j ${CPU_COUNT}
 
-if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" || "$CROSSCOMPILING_EMULATOR" != "" ]]; then
     ninja -C builddir test -j ${CPU_COUNT}
 fi
 

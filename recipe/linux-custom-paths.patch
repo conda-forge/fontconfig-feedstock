@@ -22,7 +22,7 @@ index a415d39..438a250 100644
      fc_fonts_paths = ['/System/Library/Fonts', '/Library/Fonts', '~/Library/Fonts', '/System/Library/Assets/com_apple_MobileAsset_Font3', '/System/Library/Assets/com_apple_MobileAsset_Font4']
    else
 -    fc_fonts_paths = ['/usr/share/fonts', '/usr/local/share/fonts']
-+    fc_fonts_paths = ['/usr/share/fonts', join_paths(prefix, 'fonts')]
++    fc_fonts_paths = ['/usr/share/fonts',  join_paths(prefix, 'share', 'fonts'), join_paths(prefix, 'fonts')]
    endif
  else
    fc_fonts_paths = default_fonts_dirs

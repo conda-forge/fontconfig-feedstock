@@ -1,21 +1,19 @@
-{% set version = "2.15.0" %}
-{% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
+{% set version = "2.17.1" %}
 
 package:
   name: fontconfig
   version: {{ version }}
 
 source:
-  url: http://www.freedesktop.org/software/fontconfig/release/fontconfig-{{ version }}.tar.gz
-  sha256: f5f359d6332861bd497570848fcb42520964a9e83d5e3abe397b6b6db9bcaaf4
+  url: https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/{{ version }}/fontconfig-{{ version }}.tar.gz
+  sha256: 82e73b26adad651b236e5f5d4b3074daf8ff0910188808496326bd3449e5261d
   patches:
     # This patch won't be submitted upstream. It sets us up to always find the right Conda files:
     - linux-custom-paths.patch  # [linux]
     - windows-compat.patch      # [win]
 
 build:
-  number: 2
+  number: 0
   binary_has_prefix_files:   # [unix]
     - lib/libfontconfig.so.1.*    # [linux]
     - lib/libfontconfig.*.dylib*  # [osx]
@@ -29,10 +27,10 @@ requirements:
   build:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
-    - {{ posix }}gperf
+    - gperf
     - meson
     - ninja
-    - {{ native }}pkg-config
+    - pkg-config
     - python
   host:
     - expat

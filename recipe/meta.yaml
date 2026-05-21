@@ -1,12 +1,12 @@
-{% set version = "2.17.1" %}
+{% set version = "2.18.0" %}
 
 package:
   name: fontconfig
   version: {{ version }}
 
 source:
-  url: https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/{{ version }}/fontconfig-{{ version }}.tar.gz
-  sha256: 82e73b26adad651b236e5f5d4b3074daf8ff0910188808496326bd3449e5261d
+  url: https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/{{ version }}/fontconfig-{{ version }}.tar.xz
+  sha256: 214ac97a173a0930f54a556a2b7007cc2ba8559f4b1aa4d392ad00d8444d9bb8
   patches:
     # This patch won't be submitted upstream. It sets us up to always find the right Conda files:
     - linux-custom-paths.patch  # [linux]

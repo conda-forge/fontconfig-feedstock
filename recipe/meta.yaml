@@ -36,6 +36,7 @@ requirements:
     - expat
     - freetype
     - libiconv  # [win]
+    - libintl-devel  # [not linux]
     - libuuid   # [linux]
     - zlib
 

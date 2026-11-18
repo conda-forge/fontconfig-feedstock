@@ -30,7 +30,7 @@ requirements:
     - gperf
     - meson
     - ninja
-    - pkg-config
+    - pkgconf
     - python
   host:
     - expat
